@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Añadir método de pago | Cybox</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/remaster.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-left">
+            <img src="img/9356833676_830740ac-9113-4059-a1ac-d28d3ccaed02.png" alt="Icon" class="header-icon">
+            <span class="cybox-title">CYBOX</span>
+        </div>
+        <nav class="header-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="pagos.html">Pagos</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="cybox-pagos-container">
+            <section class="cybox-pagos-main">
+                <h2 class="cybox-pagos-title">Añadir método de pago</h2>
+                <hr class="cybox-pagos-line">
+                <div class="cybox-pagos-metodos">
+                    <h3>Selecciona un método de pago</h3>
+                    <div class="cybox-pagos-metodo animated-method">
+                        <input type="radio" name="metodo" id="tarjeta">
+                        <label for="tarjeta">
+                            <i class="fas fa-credit-card"></i>
+                            Tarjeta de crédito o débito
+                        </label>
+                    </div>
+                    <div class="cybox-pagos-metodo animated-method">
+                        <input type="radio" name="metodo" id="paypal">
+                        <label for="paypal">
+                            <i class="fab fa-paypal"></i>
+                            PayPal
+                        </label>
+                    </div>
+                    <div class="cybox-pagos-metodo animated-method">
+                        <input type="radio" name="metodo" id="cripto">
+                        <label for="cripto">
+                            <i class="fab fa-bitcoin"></i>
+                            Criptomonedas
+                        </label>
+                    </div>
+                    <div class="cybox-pagos-metodo animated-method">
+                        <input type="radio" name="metodo" id="banco">
+                        <label for="banco">
+                            <i class="fas fa-university"></i>
+                            Transferencia Bancaria
+                        </label>
+                    </div>
+                </div>
+                <div class="cybox-pagos-ayuda">
+                    <h3><i class="fas fa-question-circle"></i> ¿Necesitas ayuda?</h3>
+                    <p>Si tienes dudas sobre los métodos de pago, <a href="#contact-modal">contáctanos aquí</a> o revisa la <a href="faq.html">FAQ</a>.</p>
+                </div>
+            </section>
+        </div>
+        <div id="contact-modal" class="contact-modal">
+            <div class="contact-modal-content">
+                <h2>Contacto pagos Cybox</h2>
+                <form>
+                    <label for="contact-email">Correo electrónico</label>
+                    <input type="email" id="contact-email" name="contact-email" required>
+                    <label for="contact-msg">Mensaje</label>
+                    <textarea id="contact-msg" name="contact-msg" rows="3" required></textarea>
+                    <button type="submit" class="btn-green">Enviar solicitud</button>
+                </form>
+                <a href="#" class="close-modal">Cerrar</a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Cybox. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

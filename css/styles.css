@@ -1,0 +1,921 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #fff;
+    color: #222;
+    min-height: 100vh;
+}
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 32px;
+    background: #222;
+}
+.header-left {
+    display: flex;
+    align-items: center;
+}
+.header-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.header-nav ul {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.header-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+.header-nav a:hover {
+    color: #19c419;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(90deg, #222 60%, #19c419 100%);
+    color: #fff;
+    padding: 48px 32px 32px 32px;
+    border-radius: 0 0 32px 32px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    margin-bottom: 32px;
+}
+.hero-content {
+    max-width: 600px;
+}
+.hero .main-title {
+    color: #fff;
+    font-size: 2.8rem;
+    margin-bottom: 16px;
+}
+.hero-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 24px;
+}
+.cta-btn {
+    display: inline-block;
+    background: #19c419;
+    color: #fff;
+    font-weight: 700;
+    padding: 14px 32px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: background 0.2s;
+}
+.cta-btn:hover {
+    background: #148f14;
+}
+.hero-img {
+    width: 320px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 24px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+    background: #222;
+}
+.courses.udemy-style {
+    background: #fff;
+    padding: 32px 0;
+    border-radius: 24px;
+    margin-bottom: 32px;
+}
+.udemy-course-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+}
+.udemy-course-card {
+    background: #f7f7f7;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    width: 320px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+    animation: fadeInUdemy 0.8s ease;
+}
+@keyframes fadeInUdemy {
+    from { opacity: 0; transform: scale(0.95);}
+    to { opacity: 1; transform: scale(1);}
+}
+.udemy-course-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 24px rgba(25,196,25,0.15);
+}
+.udemy-course-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+.udemy-course-info {
+    padding: 18px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.udemy-course-info h3 {
+    font-size: 1.15rem;
+    margin-bottom: 4px;
+    color: #222;
+    font-weight: 700;
+}
+.udemy-course-info p {
+    font-size: 0.98rem;
+    color: #444;
+    margin-bottom: 6px;
+}
+.udemy-level {
+    font-size: 0.92rem;
+    color: #19c419;
+    font-weight: 600;
+}
+.udemy-rating {
+    font-size: 0.92rem;
+    color: #f5b50a;
+    font-weight: 600;
+    margin-left: 8px;
+}
+.udemy-rating i {
+    margin-right: 2px;
+}
+
+/* Courses Section */
+.courses {
+    padding: 32px 0;
+    background: #f7f7f7;
+    border-radius: 24px;
+    margin-bottom: 32px;
+}
+.courses h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 32px;
+    color: #222;
+}
+.course-list {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.course-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    padding: 32px 24px;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.course-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 24px rgba(25,196,25,0.15);
+}
+.course-icon {
+    font-size: 2.5rem;
+    color: #19c419;
+    margin-bottom: 16px;
+}
+.course-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    color: #222;
+}
+.course-card p {
+    font-size: 1rem;
+    color: #444;
+}
+
+/* About Section */
+.about {
+    padding: 32px 0;
+    text-align: center;
+}
+.about h2 {
+    font-size: 1.7rem;
+    margin-bottom: 18px;
+    color: #222;
+}
+.about ul {
+    display: inline-block;
+    text-align: left;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: #333;
+    background: #f7f7f7;
+    border-radius: 12px;
+    padding: 18px 32px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.about ul li {
+    margin-bottom: 10px;
+    list-style: disc inside;
+}
+
+/* Contact Section */
+.contact {
+    padding: 32px 0 16px 0;
+    text-align: center;
+}
+.contact h2 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    color: #222;
+}
+.contact a {
+    color: #19c419;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 18px 0;
+    margin-top: 32px;
+    border-radius: 16px 16px 0 0;
+    font-size: 1rem;
+}
+
+/* CYBOX PAGOS STYLE */
+.cybox-pagos-container {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 40px 0;
+}
+.cybox-pagos-main {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    padding: 32px 28px;
+    min-width: 380px;
+    max-width: 420px;
+}
+.cybox-pagos-progress {
+    margin-bottom: 32px;
+}
+.cybox-pagos-progress .active {
+    font-weight: 700;
+    color: #222;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+.cybox-pagos-bar {
+    width: 100%;
+    height: 6px;
+    background: #eee;
+    border-radius: 3px;
+    margin-top: 8px;
+    position: relative;
+}
+.cybox-pagos-bar-fill {
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(90deg, #19c419 60%, #222 100%);
+    border-radius: 3px;
+    transition: width 0.4s;
+}
+.cybox-pagos-metodos h3 {
+    font-size: 1rem;
+    color: #222;
+    margin-bottom: 18px;
+    font-weight: 600;
+}
+.cybox-pagos-metodo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #f7f7f7;
+    border-radius: 8px;
+    padding: 14px 12px;
+    margin-bottom: 14px;
+    transition: box-shadow 0.2s;
+    cursor: pointer;
+}
+.cybox-pagos-metodo:hover {
+    box-shadow: 0 2px 8px rgba(25,196,25,0.12);
+}
+.cybox-pagos-metodo input[type="radio"] {
+    accent-color: #19c419;
+    width: 18px;
+    height: 18px;
+}
+.cybox-pagos-metodo label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
+    color: #222;
+    cursor: pointer;
+}
+.cybox-pagos-metodo i {
+    font-size: 1.3rem;
+    color: #19c419;
+}
+
+.cybox-pagos-resumen {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    padding: 32px 24px;
+    min-width: 320px;
+    max-width: 340px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.cybox-pagos-resumen h4 {
+    font-size: 1.1rem;
+    color: #222;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+.cybox-pagos-curso {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 8px;
+}
+.cybox-pagos-curso img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(25,196,25,0.10);
+}
+.cybox-pagos-curso strong {
+    font-size: 1rem;
+    color: #222;
+}
+.cybox-pagos-curso p {
+    font-size: 0.98rem;
+    color: #19c419;
+    margin: 2px 0;
+}
+.cybox-pagos-curso small {
+    font-size: 0.85rem;
+    color: #888;
+}
+.cybox-pagos-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.08rem;
+    font-weight: 700;
+    color: #222;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+.cybox-pagos-beneficio {
+    background: #eaffea;
+    color: #19c419;
+    border-radius: 6px;
+    padding: 8px 10px;
+    font-size: 0.98rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.cybox-pagos-codigo {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    font-size: 0.98rem;
+    margin-bottom: 8px;
+}
+.cybox-pagos-legal {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.92rem;
+    color: #222;
+}
+.cybox-pagos-legal a {
+    color: #19c419;
+    text-decoration: underline;
+}
+.cybox-pagos-btn {
+    background: #19c419;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 0;
+    font-size: 1.08rem;
+    font-weight: 700;
+    margin-top: 10px;
+    cursor: not-allowed;
+    opacity: 0.7;
+    width: 100%;
+    transition: opacity 0.2s;
+}
+.cybox-pagos-btn.enabled {
+    cursor: pointer;
+    opacity: 1;
+}
+.cybox-pagos-title {
+    font-size: 1.3rem;
+    color: #222;
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-align: left;
+}
+.cybox-pagos-line {
+    border: none;
+    border-top: 2px solid #eee;
+    margin: 0 0 24px 0;
+}
+
+/* LOGIN */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+.login-box {
+    width: 350px;
+    padding: 32px 24px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login-logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 16px;
+    background: #eaeaea;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-box h1 {
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+    font-weight: 600;
+}
+.login-box form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.login-box label {
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+    margin-top: 12px;
+}
+.login-box input[type="text"],
+.login-box input[type="password"] {
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+.login-box a {
+    font-size: 0.9rem;
+    color: #0078d4;
+    text-decoration: none;
+    margin-left: 8px;
+}
+.btn-green {
+    background: #19c419;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 0;
+    font-size: 1rem;
+    margin-top: 16px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: 600;
+}
+.divider {
+    width: 100%;
+    text-align: center;
+    margin: 18px 0 10px 0;
+    position: relative;
+}
+.divider span {
+    background: #fff;
+    padding: 0 12px;
+    position: relative;
+    z-index: 1;
+}
+.divider:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #ccc;
+    z-index: 0;
+}
+.btn-google {
+    background: #fff;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    padding: 10px 0;
+    font-size: 1rem;
+    width: 100%;
+    margin-bottom: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.google-icon {
+    font-weight: bold;
+    font-size: 1.2rem;
+    background: #eee;
+    border-radius: 50%;
+    padding: 2px 8px;
+}
+.create-account {
+    font-size: 0.95rem;
+    margin-top: 10px;
+}
+
+/* REGISTER */
+.register-container {
+    display: flex;
+    min-height: 100vh;
+}
+.register-left {
+    flex: 1;
+    background: url('../img/kali-linux-wallpaper-v6.png') center center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.register-left::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+}
+.register-left h1 {
+    position: relative;
+    color: #fff;
+    z-index: 1;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+.register-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+}
+.register-box {
+    width: 400px;
+    padding: 32px 24px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.already-account {
+    text-align: right;
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+}
+.register-box h1 {
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+    font-weight: 600;
+}
+.register-box form {
+    display: flex;
+    flex-direction: column;
+}
+.register-box label {
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+    margin-top: 12px;
+}
+.register-box input[type="email"],
+.register-box input[type="password"],
+.register-box input[type="text"] {
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+.register-box small {
+    font-size: 0.85rem;
+    color: #555;
+    margin-bottom: 8px;
+}
+.register-box input[type="checkbox"] {
+    margin-right: 8px;
+}
+.btn-dark {
+    background: #222;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 0;
+    font-size: 1rem;
+    margin-top: 16px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: 600;
+}
+.register-box small:last-child {
+    display: block;
+    margin-top: 18px;
+    color: #888;
+    font-size: 0.8rem;
+}
+
+/* Testimonios Section */
+.testimonios {
+    padding: 32px 0;
+    background: #f7f7f7;
+    border-radius: 18px;
+    margin-bottom: 32px;
+    text-align: center;
+}
+.testimonios-list {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 18px;
+}
+.testimonio-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(25,196,25,0.07);
+    padding: 22px 18px;
+    max-width: 320px;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.testimonio-card i {
+    font-size: 2.2rem;
+    color: #19c419;
+}
+.testimonio-card span {
+    font-size: 0.95rem;
+    color: #888;
+    margin-top: 8px;
+}
+
+/* FAQ Section */
+.faq {
+    padding: 32px 0;
+    text-align: center;
+    margin-bottom: 32px;
+}
+.faq-list {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 18px;
+}
+.faq-item {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(25,196,25,0.07);
+    padding: 22px 18px;
+    max-width: 320px;
+    text-align: left;
+}
+.faq-item h3 {
+    font-size: 1.08rem;
+    color: #19c419;
+    margin-bottom: 8px;
+}
+.faq-item p {
+    font-size: 0.98rem;
+    color: #222;
+}
+
+/* Social Icons */
+.social-icons {
+    margin-top: 16px;
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+}
+.social-icons a {
+    color: #19c419;
+    font-size: 1.6rem;
+    transition: color 0.2s;
+}
+.social-icons a:hover {
+    color: #148f14;
+}
+
+.cybox-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #19c419;
+    margin-left: 12px;
+    letter-spacing: 2px;
+}
+.cybox-logo {
+    display: block;
+    margin: 0 auto 24px auto;
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    border-radius: 50%;
+    box-shadow: 0 2px 12px rgba(25,196,25,0.12);
+    animation: logoFadeIn 1s;
+}
+@keyframes logoFadeIn {
+    from { opacity: 0; transform: scale(0.8);}
+    to { opacity: 1; transform: scale(1);}
+}
+.about ul li i {
+    color: #19c419;
+    margin-right: 8px;
+}
+.equipo {
+    padding: 32px 0;
+    background: #fff;
+    border-radius: 18px;
+    margin-bottom: 32px;
+    text-align: center;
+}
+.equipo-list {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 18px;
+}
+.equipo-card {
+    background: #f7f7f7;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(25,196,25,0.07);
+    padding: 22px 18px;
+    max-width: 220px;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.equipo-card:hover {
+    transform: translateY(-6px) scale(1.04);
+    box-shadow: 0 8px 24px rgba(25,196,25,0.15);
+}
+.equipo-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(25,196,25,0.10);
+}
+.equipo-card h3 {
+    font-size: 1.08rem;
+    color: #19c419;
+    margin-bottom: 4px;
+}
+.equipo-card p {
+    font-size: 0.95rem;
+    color: #222;
+    text-align: center;
+}
+.cta-final {
+    padding: 32px 0;
+    text-align: center;
+    background: linear-gradient(90deg, #19c419 0%, #222 100%);
+    color: #fff;
+    border-radius: 18px;
+    margin-bottom: 32px;
+}
+.cta-final h2 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+}
+.cta-final p {
+    font-size: 1.08rem;
+    margin-bottom: 18px;
+}
+.cta-final .cta-btn {
+    background: #fff;
+    color: #19c419;
+    font-weight: 700;
+    border-radius: 8px;
+    padding: 12px 32px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: background 0.2s, color 0.2s;
+}
+.cta-final .cta-btn:hover {
+    background: #19c419;
+    color: #fff;
+}
+.forgot-modal {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+.forgot-modal:target {
+    display: flex;
+}
+.forgot-modal-content {
+    background: #fff;
+    padding: 32px 24px;
+    border-radius: 10px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+    min-width: 300px;
+    text-align: center;
+    position: relative;
+}
+.forgot-modal-content h2 {
+    margin-bottom: 18px;
+    color: #19c419;
+}
+.forgot-modal-content label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1rem;
+    color: #222;
+}
+.forgot-modal-content input[type="email"] {
+    width: 90%;
+    padding: 8px;
+    margin-bottom: 14px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+.close-modal {
+    display: inline-block;
+    margin-top: 12px;
+    color: #19c419;
+    text-decoration: underline;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.close-modal:hover {
+    color: #148f14;
+}
+@media (max-width: 900px) {
+    .equipo-list, .testimonios-list, .faq-list {
+        flex-direction: column;
+        gap: 18px;
+        align-items: center;
+    }
+    .equipo-card, .testimonio-card, .faq-item {
+        max-width: 95vw;
+    }
+}

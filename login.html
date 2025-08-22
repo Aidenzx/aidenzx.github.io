@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in to Cybox</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<main class="login-container">
+    <div class="login-box">
+        <div class="login-logo">
+            <img src="img/9356833676_830740ac-9113-4059-a1ac-d28d3ccaed02.png" alt="Login Icon" style="width: 80px; height: 80px; border-radius: 50%; display: block; margin: 0 auto;">
+        </div>
+        <h1>Sign in to Cybox</h1>
+        <form>
+            <label for="username">username or address</label>
+            <input type="text" id="username" name="username">
+            
+            <label for="password">
+    password <a href="#forgot-modal">forgot password?</a>
+</label>
+            <input type="password" id="password" name="password">
+            
+            <button type="submit" class="btn-green">Sign in</button>
+        </form>
+        <div class="divider">
+            <span>or</span>
+        </div>
+        <button class="btn-google">
+            <span class="google-icon"><i class="fa-brands fa-google"></i></span> Continue with Google
+        </button>
+        <button class="btn-google">
+            <span class="google-icon" style="background:#eee;">
+                <img src="https://img.icons8.com/color/48/protonmail-2.png" alt="protonmail-2" style="width:24px; height:24px; border-radius:50%; vertical-align:middle;">
+            </span>
+            Continue with ProtonMail
+        </button>
+        <button class="btn-google">
+            <span class="google-icon" style="background:#eee;">
+                <img src="https://img.icons8.com/color/48/epic-games.png" alt="epic-games" style="width:24px; height:24px; border-radius:50%; vertical-align:middle;">
+            </span>
+            Continue with Epic Games
+        </button>
+
+
+        <p class="create-account">New to CyBox? <a href="register.html">Create an account</a></p>
+    </div>
+</main>
+
+<!-- MODAL PARA RECUPERAR CONTRASEÑA -->
+<div id="forgot-modal" class="forgot-modal">
+    <div class="forgot-modal-content">
+        <h2>Recuperar contraseña</h2>
+        <form>
+            <label for="recovery-email">Correo de recuperación</label>
+            <input type="email" id="recovery-email" name="recovery-email" required>
+            <button type="submit" class="btn-green">Enviar</button>
+        </form>
+        <a href="#" class="close-modal">Cerrar</a>
+    </div>
+</div>
+
+</body>
+</html>
